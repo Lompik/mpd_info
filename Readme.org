@@ -1,0 +1,31 @@
+#TITLE: Display MPD (Music Media Player) current song info on screen [xcb]
+
+* Motivation 
+
+I was having some issues with [[https://github.com/brndnmtthws/conky/issues/103][conky]] when trying to display [[http://www.musicpd.org/][MPD]]'s current song information so I decided to create a *simple* replacement. 
+I looked into implementing it in =python= however i wanted to play with c/autotools and the current packages for xcb (xpyb (deprecated i think) or xcffib) does not seem mature enough and undocumented (just like xcb).
+
+* Installation
+** dependencies
+in order to build from source, you will need the following libraries (will be checked by autoconf):
+  - pango
+  - xcb
+  - cairo
+  - glib
+  - libmpdclient
+
+** Compiling
+
+#+begin_src shell
+aclocal ; autoheader; automake --add-missing; autoconf
+./configure 
+make 
+#+end_src
+
+* Configuration
+
+a sample configuration file is given in the etc folder. it will only be read if copied to =~/.config/mpd_info=.
+
+* mandatory screenshot
+
+[[./screenshot/20151022_203119_460x231.png]]
