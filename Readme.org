@@ -1,4 +1,4 @@
-#TITLE: Display MPD (Music Media Player) current song info on screen [xcb]
+#+TITLE: Display MPD (Music Media Player) current song info on screen [xcb]
 
 * Motivation 
 
