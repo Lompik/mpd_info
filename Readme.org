@@ -13,6 +13,7 @@ in order to build from source, you will need the following libraries (will be ch
   - cairo
   - glib
   - libmpdclient
+  - Font: [[https://fortawesome.github.io/Font-Awesome/][awesome]] (not checked! you'll notice if you dontr have it)
 
 ** Compiling
 
