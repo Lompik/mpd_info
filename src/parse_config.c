@@ -79,7 +79,8 @@ struct RGBcolor colorConverter(int hexValue)
     return rgbColor;
 }
 
-int get_user_config( struct user_config *uc, const char *path) {
+int get_user_config( struct user_config *uc, const char *path)
+{
     FILE *fp;
     char *token; char *saveptr, *value;
     int count=0;char bufr[MAX_USER_CONF_LINE_READ]; int hex;
@@ -164,6 +165,8 @@ int get_user_config( struct user_config *uc, const char *path) {
         log_warn("error can't open file: %s. Using default options.",path);
         //exit(1);
     }
+
+
 
     return(0);
 }

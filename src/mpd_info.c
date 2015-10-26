@@ -7,9 +7,6 @@
 #include <string.h> /*strcpy*/
 
 
-#include <glib.h>
-#include <glib-object.h>
-
 #include <xcb/shape.h>
 #include <xcb/xcb.h>
 
@@ -66,11 +63,11 @@ main ()
   xcb_screen_t     *screen;
   xcb_window_t      win;
 
-  guint32 selmask = XCB_CW_OVERRIDE_REDIRECT | XCB_CW_EVENT_MASK;
-  guint32 selval[] = { 1, XCB_EVENT_MASK_EXPOSURE | XCB_EVENT_MASK_BUTTON_PRESS | XCB_EVENT_MASK_BUTTON_RELEASE };
+  uint32_t selmask = XCB_CW_OVERRIDE_REDIRECT | XCB_CW_EVENT_MASK;
+  uint32_t selval[] = { 1, XCB_EVENT_MASK_EXPOSURE | XCB_EVENT_MASK_BUTTON_PRESS | XCB_EVENT_MASK_BUTTON_RELEASE };
 
-  guint32 vals[] = { 0, 0 ,0,0};
-  guint16 mask = XCB_CONFIG_WINDOW_X | XCB_CONFIG_WINDOW_Y | XCB_CONFIG_WINDOW_WIDTH | XCB_CONFIG_WINDOW_HEIGHT;
+  uint32_t vals[] = { 0, 0 ,0,0};
+  uint16_t mask = XCB_CONFIG_WINDOW_X | XCB_CONFIG_WINDOW_Y | XCB_CONFIG_WINDOW_WIDTH | XCB_CONFIG_WINDOW_HEIGHT;
   struct drawarea self={645,350,20};
   wordexp_t abs_userconf_path;
   int textwidth=0,textheight=0;
@@ -430,8 +427,6 @@ int get_mpd_status()
   }
 
   //fprintf(stderr,"album: %s \n",mpd_info.album);
-
-
 
   return 1;
 }

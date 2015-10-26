@@ -7,14 +7,12 @@ LIBS=\
     @xcb_LIBS@\
     @pango_LIBS@\
     @cairo_LIBS@\
-    @glib_LIBS@\
     @libmpdclient_LIBS@
 INCLUDE=\
     @x11_CFLAGS@\
     @xcb_CFLAGS@\
     @pango_CFLAGS@\
     @cairo_CFLAGS@\
-    @glib_CFLAGS@\
     @libmpdclient_CFLAGS@
 
 AM_LIBS=$(LIBS)

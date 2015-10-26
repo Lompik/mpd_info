@@ -24,7 +24,6 @@ PKG_CHECK_MODULES([xcbproto], xcb-proto >= 1.7.1)
 PKG_CHECK_MODULES([xcb], xcb > 1.5 xcb-shape xcb-aux xcb-randr cairo-xcb)
 PKG_CHECK_MODULES([x11], [x11])
 PKG_CHECK_MODULES([pango],    [pango pangocairo])
-PKG_CHECK_MODULES([glib],    [glib-2.0 >= 2.24.1])
 PKG_CHECK_MODULES([libmpdclient],	  [libmpdclient])
 PKG_CHECK_MODULES([cairo],	  [cairo cairo-xlib])
 
