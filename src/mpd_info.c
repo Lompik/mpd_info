@@ -359,10 +359,14 @@ char *second_to_mins(uint32_t seconds) {
 
 char *loadBar(uint32_t x, uint32_t n, int w) {
 
-  if ((x == n) && (x % (n / 100 + 1) != 0))
-    return ("100%");
-
   char *result = malloc(w + 10);
+
+  if ((x == n) && (x % (n / 100 + 1) != 0))
+  {
+      strcpy(result, "100%");
+      return result;
+  }
+
 
   float ratio = x / (float)n;
   int c = ratio * w;
